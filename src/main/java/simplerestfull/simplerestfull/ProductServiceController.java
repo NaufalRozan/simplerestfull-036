@@ -57,16 +57,15 @@ public class ProductServiceController {
     //Method tambah data
     @RequestMapping(value = "/products", method = RequestMethod.POST)
     public ResponseEntity<Object> createProduct(@RequestBody Product product){
-        productRepo.put(product.getId(), product);
         //Kondisi ID sudah ada ketika data ditambah
         if(productRepo.containsKey(product.getId())){
             return new ResponseEntity<>("ID Produk Sudah Ada", HttpStatus.OK);
         }
-        //KOndisi ID kosong ketika tambah data
-        else if (productRepo.containsKey(product.getId())){
-            return new ResponseEntity<>("ID Produk Harus Diisi", HttpStatus.OK);
+      //kondisi jika success/berhasil meng create data
+        else{
+            productRepo.put(product.getId(), product);
+            return new ResponseEntity<>("Produk Sukses Dibuat", HttpStatus.CREATED);
         }
-        return new ResponseEntity<>("Produk Berhasil Dibuat", HttpStatus.CREATED);
     }
     
     @RequestMapping(value = "/products")
