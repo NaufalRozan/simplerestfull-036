@@ -67,7 +67,7 @@ public class ProductServiceController {
         if(productRepo.containsKey(product.getId())){
             return new ResponseEntity<>("ID Produk Sudah Ada", HttpStatus.OK);
         }
-      //kondisi jika success/berhasil meng create data
+      //kondisi jika berhasil membuat data baru
         else{
             productRepo.put(product.getId(), product);
             return new ResponseEntity<>("Produk Sukses Dibuat", HttpStatus.CREATED);

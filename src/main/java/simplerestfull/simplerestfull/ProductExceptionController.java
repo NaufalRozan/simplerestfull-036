@@ -13,9 +13,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
  *
  * @author rozan
  */
+
+//membuat Controller Produk yang tidak ada
 @ControllerAdvice
 public class ProductExceptionController {
     @ExceptionHandler (value = ProductNotfoundException.class)
+    //membuat alert jika produk tidak ditemukan
     public ResponseEntity<Object> exception(ProductNotfoundException exception){
         return new ResponseEntity<>("Product Tidak Ditemukan", HttpStatus.NOT_FOUND);
     }
