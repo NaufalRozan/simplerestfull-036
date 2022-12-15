@@ -13,6 +13,7 @@ public class Product {
     private String name;
     private String harga;
     private String total;
+    private String quantity;
     
     public String getId() {
         return id;
@@ -42,6 +43,13 @@ public class Product {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 }
     

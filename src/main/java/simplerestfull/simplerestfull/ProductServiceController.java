@@ -27,7 +27,8 @@ public class ProductServiceController {
         honey.setId("1");
         honey.setName("Honey");
         honey.setHarga("Rp. 20.000");
-        honey.setTotal("Rp. 35.000");
+        honey.setTotal("Rp. 40.000");
+        honey.setQuantity("2");
         productRepo.put(honey.getId(), honey);
         
         Product almond = new Product();
@@ -35,6 +36,7 @@ public class ProductServiceController {
         almond.setName("Almond");
         almond.setHarga("Rp. 10.000");
         almond.setTotal("Rp. 20.000");
+        almond.setQuantity("2");
         productRepo.put(almond.getId(), almond);
     }
     
