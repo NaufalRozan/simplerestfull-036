@@ -11,6 +11,8 @@ package simplerestfull.simplerestfull;
 public class Product {
     private String id;
     private String name;
+    private String harga;
+    private String total;
     
     public String getId() {
         return id;
@@ -27,4 +29,19 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }   
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+    public String getTotal() {
+        return total;
+    }
+
+    public void setTotal(String total) {
+        this.total = total;
+    }
 }
+    
